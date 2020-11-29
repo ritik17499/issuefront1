@@ -432,7 +432,6 @@ export class DescriptionComponent implements OnInit {
         if (data['status'] == 200) {
           let response = data['data']
           this.imageUrl = `http://api.virtuasha.online/uploads/${response.screenshot}`
-          // this.imageUrl = `http://tracking-node.akshaypatil.online/uploads/${response.screenshot}`
           this.title = response.title
           this.status = response.status
           this.editorContent = response.description

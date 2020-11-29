@@ -10,9 +10,8 @@ import { HttpErrorResponse, HttpParams } from "@angular/common/http";
 @Injectable()
 export class AppService {
 
-  private url = 'http://api.virtuasha.online';
-  // private url ='http://tracking-node.akshaypatil.online';
-  //private url='http://api.virtuasha.online';
+  private url = 'http://localhost:3000';
+  
 
 
   constructor(public http: HttpClient) { }

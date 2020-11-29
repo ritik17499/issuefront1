@@ -145,12 +145,15 @@ export class SignInComponent implements OnInit {
 
             if (apiResponse.status === 200) {
               let card = document.getElementById('card');
-             // card.classList.add('anime')
+              card.classList.add('anime')
 
               Cookie.set('authtoken', apiResponse.data.authToken);
 
 
               this.appService.setUserInfoInLocalStorage(apiResponse.data.userDetails);
+              this.snackBar.open(`idk mannn`, "Dismiss", {
+                duration: 5000,
+              }); 
 
               setTimeout(() => {
                 this.router.navigate(['/home']);
@@ -163,8 +166,10 @@ export class SignInComponent implements OnInit {
               });
 
             } else {
-
-              this.snackBar.open(`${apiResponse.message}`, "Dismiss", {
+              this.snackBar.open(`idkkk`, "Dismiss", {
+                duration: 5000,
+              });
+              this.snackBar.open(`${apiResponse.message}`, "Dismisso", {
                 duration: 5000,
               });
 
